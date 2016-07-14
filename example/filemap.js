@@ -1,3 +1,9 @@
+/**
+ * @author Jrain Lau
+ * @email jrainlau@163.com
+ * @date 2016-07-14
+ */
+ 
 'use strict'
 const fs = require('fs')
 let ignoreCase = []
@@ -15,13 +21,16 @@ const placeHolder = (num) => {
   return mark + '|__'
 }
 
+let isDic = (url) => fs.statSync(url).isDirectory()
+
 const traverseFiles = (path, deep) => {
   let files = fs.readdirSync(path)
   let con = false
   for (let i = 0, len = files.length; i < len; i++) {
-    files[i] !== 'filemap.js'? console.log(placeHolder(deep), files[i], '\n'): false
-    ignoreCase.indexOf(files[i]) !== -1? con = false: con = true
-    files[i].split('.')[1] === undefined && con? traverseFiles(path + '\\' + files[i], deep + 1): false
+    if (files[i] !== 'filemap.js') console.log(placeHolder(deep), files[i], '\n')
+    con = ignoreCase.indexOf(files[i]) === -1? true: false
+    let dirPath = path + '\\' + files[i]
+    if (isDic(dirPath) && con) traverseFiles(dirPath, deep + 1)
   }
 }
 

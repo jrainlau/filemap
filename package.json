@@ -1,0 +1,25 @@
+{
+  "name": "filemap",
+  "version": "0.0.1",
+  "description": "A tool for creating files structure tree map.",
+  "main": "filemap.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jrainlau/filemap.git"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "Jrain Lau",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jrainlau/filemap/issues"
+  },
+  "homepage": "https://github.com/jrainlau/filemap#readme"
+}

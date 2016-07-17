@@ -6,20 +6,25 @@
  
 'use strict'
 const fs = require('fs')
-let ignoreCase = []
+
+let ignoreCase = {}
 if(process.argv[2] === '-i'){
-    ignoreCase = process.argv.slice(3)
+    for (let i of process.argv.slice(3)) {
+      ignoreCase[i] = true
+    }
 }
 
 console.log('\n\nThe files tree is:\n=================\n\n')
 
 const placeHolder = (num) => {
-  let mark = ''
+  if (placeHolder.cache[num]) return placeHolder.cache[num] + '|__'
+  placeHolder.cache[num] = ''
   for (let i = 0; i < num; i++) {
-    mark += '  '
+    placeHolder.cache[num] += '  '
   }
-  return mark + '|__'
+  return placeHolder.cache[num] + '|__'
 }
+placeHolder.cache = {}
 
 let isDic = (url) => fs.statSync(url).isDirectory()
 
@@ -28,7 +33,7 @@ const traverseFiles = (path, deep) => {
   let con = false
   for (let i = 0, len = files.length; i < len; i++) {
     if (files[i] !== 'filemap.js') console.log(placeHolder(deep), files[i], '\n')
-    con = ignoreCase.indexOf(files[i]) === -1? true: false
+    con = ignoreCase[files[i]] === undefined? true: false
     let dirPath = path + '\\' + files[i]
     if (isDic(dirPath) && con) traverseFiles(dirPath, deep + 1)
   }

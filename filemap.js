@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 /**
  * @author Jrain Lau
  * @email jrainlau@163.com

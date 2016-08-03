@@ -1,10 +1,13 @@
 {
-  "name": "filemap",
-  "version": "0.0.1",
+  "name": "filemap.js",
+  "version": "0.0.2",
   "description": "A tool for creating files structure tree map.",
   "main": "filemap.js",
   "directories": {
     "example": "example"
+  },
+  "bin": {
+  	"filemap": "filemap.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

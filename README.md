@@ -3,12 +3,10 @@
 
 ## Usage && Example
 ```
-git clone git@github.com:jrainlau/filemap.git
-cd ./filemap && cd example
+npm install filemap.js -g
 
-node filemap.js
+filemap
 ```
-(PS: Make sure you've placed the `filemap.js` to the root folder)
 
 And you will get a files structure tree map like this
 ```
@@ -47,9 +45,12 @@ The files tree is:
 
 ## Options
 ```
-node filemap.js <-i folder-name folder-name folder-name ...>
+filemap <-i folder-name folder-name folder-name ...>
 ```
 - <-i folder-name>: In order to ignore some folders which contains lots of files and folders, such as `node_modules` etc, you could use this command to avoid them to be unfolded. Use blank to split each `folder-name`.
+
+## Update
+Set the `filemap.js` into global command.
 
 ## License
 MIT

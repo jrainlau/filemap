@@ -34,7 +34,7 @@ const traverseFiles = (path, deep) => {
   let files = fs.readdirSync(path)
   let con = false
   for (let i = 0, len = files.length; i < len; i++) {
-    if (files[i] !== 'filemap.js') console.log(placeHolder(deep), files[i], '\n')
+    if (files[i] !== 'filemap.js') console.log(placeHolder(deep), files[i])
     con = ignoreCase[files[i]] === undefined? true: false
     let dirPath = path + '\\' + files[i]
     if (isDic(dirPath) && con) traverseFiles(dirPath, deep + 1)

@@ -1,6 +1,6 @@
 {
   "name": "filemap.js",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A tool for creating files structure tree map.",
   "main": "filemap.js",
   "directories": {

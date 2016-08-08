@@ -13,33 +13,19 @@ And you will get a files structure tree map like this
 The files tree is:
 =================
 
-
   |__ empty.js
-
   |__ folder1
-
     |__ folder-inside.md
-
   |__ folder2
-
     |__ inside1
-
       |__ 5555.txt
-
     |__ inside2
-
       |__ hello.txt
-
       |__ staff
-
         |__ test.txt
-
   |__ some.html
-
   |__ TEST
-
     |__ xxx
-
   |__ test.md
 ```
 

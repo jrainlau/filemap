@@ -31,9 +31,10 @@ The files tree is:
 
 ## Options
 ```
-filemap <-i folder-name folder-name folder-name ...>
+node tree.js -d ./project/ -i node_modules .DS_Store .dist > tree.text
 ```
-- <-i folder-name>: In order to ignore some folders which contains lots of files and folders, such as `node_modules` etc, you could use this command to avoid them to be unfolded. Use blank to split each `folder-name`.
+- -d: Read from dir.
+- -i: In order to ignore some folders which contains lots of files and folders, such as `node_modules` etc, you could use this command to avoid them to be unfolded. Use blank to split each `folder-name`.
 
 ## Update
 Set the `filemap.js` into global command.

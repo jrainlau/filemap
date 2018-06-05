@@ -1,6 +1,8 @@
 ## Introduce
 `filemap.js` is a tool for creating files structure tree map. It's light, fast, and clever. It helps you to creat a files structure tree map automatically by one line of command.
 
+if -d dir contains .gitignore, the script will read it and add lines to ignore configure.
+
 ## Usage && Example
 ```
 npm install filemap.js -g
